@@ -1,6 +1,6 @@
 Package: mrfDepth
 Type: Package
-Version: 1.0.3
+Version: 1.0.3.9000
 Date: 2017-04-01
 Title: Depth Measures in Multivariate, Regression and Functional Settings
 Authors@R: c(

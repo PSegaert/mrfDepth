@@ -2,6 +2,12 @@
 \title{News for package "mrfDepth"}
 \encoding{UTF-8}
 
+\section{Changes in version 1.0.4 (2017-XX-XX)}{
+\itemize{
+    \item 
+ }
+}
+
 \section{Changes in version 1.0.3 (2017-04-01)}{
  \itemize{
     \item FEATURE: Added funtional depth functions: mfd, mfdmedian
