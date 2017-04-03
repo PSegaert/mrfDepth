@@ -3,6 +3,9 @@ Type: Package
 Version: 1.0.3.9000
 Date: 2017-04-01
 Title: Depth Measures in Multivariate, Regression and Functional Settings
+Description: Tools to compute depth measures and implementations of related 
+             tasks such as outlier detection, data exploration and 
+            classification of multivariate, regression and functional data.
 Authors@R: c(
             person(given="Pieter",family="Segaert", role = c("aut", "cre"), 
                    email = "Pieter.Segaert@kuleuven.be"),
@@ -25,7 +28,7 @@ Suggests:
 LinkingTo: 
     Rcpp (>= 0.12.6),
     RcppEigen (>= 0.3.2.9.0)
-Description: Tools to compute depth measures and implementations of related tasks such as outlier detection, data exploration and classification of multivariate, regression and functional data.
 License: GPL (>= 2)
 LazyLoad: yes
-
+URL: https://github.com/PSegaert/mrfDepth
+BugReports: https://github.com/PSegaert/mrfDepth/issues
