@@ -153,7 +153,8 @@ dirOutl <- function(x, z = NULL, options = list()){
     return(returned.result)
   }
   set.seed(seed)
-  res <- tryCatch( .Call("dirOutl", x, z, type, ndir, seed, rmZeroes, maxRatio, precScale),
+  res <- tryCatch( .Call("dirOutl_cpp", x, z, type, ndir, rmZeroes, maxRatio, precScale, 
+                         PACKAGE = "mrfDepth"),
                    "std::range_error" = function(e){
                      conditionMessage( e ) })
   

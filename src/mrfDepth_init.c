@@ -1,3 +1,5 @@
+#include <R.h>
+#include <Rinternals.h>
 #include <R_ext/RS.h>
 #include <stdlib.h> // for NULL
 #include <R_ext/Rdynload.h>
@@ -11,6 +13,9 @@ extern void adjprojout(void *, void *, void *, void *, void *, void *, void *, v
 extern void HSDND(void *, void *, void *, void *, void *, void *, void *, void *, void *, void *);
 extern void medcoupleC(void *, void *, void *, void *);
 extern void projoutlyingness(void *, void *, void *, void *, void *, void *, void *, void *, void *, void *, void *, void *, void *, void *, void *);
+
+/* .Call calls */
+extern SEXP dirOutl_cpp(SEXP, SEXP, SEXP, SEXP, SEXP, SEXP, SEXP);
 
 /* .Fortran calls */
 extern void F77_NAME(bagplotf)(void *, void *, void *, void *, void *, void *, void *, void *, void *, void *, void *, void *, void *, void *, void *, void *, void *, void *);
@@ -32,6 +37,13 @@ static const R_CMethodDef CEntries[] = {
   {NULL, NULL, 0}
 };
 
+static const R_CallMethodDef CallEntries[] = {
+  {"dirOutl_cpp",     (DL_FUNC) &dirOutl_cpp,     7},
+  {NULL, NULL, 0}
+};
+
+
+
 static const R_FortranMethodDef FortranEntries[] = {
   {"bagplotf",        (DL_FUNC) &F77_NAME(bagplotf),        18},
   {"halfmed2d",       (DL_FUNC) &F77_NAME(halfmed2d),        6},
@@ -48,6 +60,7 @@ static const R_FortranMethodDef FortranEntries[] = {
 
 void R_init_mrfDepth(DllInfo *dll)
 {
+  R_registerRoutines(dll, NULL, CallEntries, NULL, NULL);
   R_registerRoutines(dll, CEntries, NULL, FortranEntries, NULL);
   R_useDynamicSymbols(dll, FALSE);
 }

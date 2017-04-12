@@ -9,7 +9,7 @@ using namespace dirout;
 /*       Main Directional Outlyingness function       */
 /******************************************************/
 
-SEXP dirOutl(SEXP DATAX, SEXP DATAZ, SEXP TYPE,SEXP NDIR, SEXP RMZEROES, SEXP MAXRATIO,SEXP PRECSCALE)
+SEXP dirOutl_cpp(SEXP DATAX, SEXP DATAZ, SEXP TYPE,SEXP NDIR, SEXP RMZEROES, SEXP MAXRATIO,SEXP PRECSCALE)
 {
   
   try
