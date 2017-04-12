@@ -27,7 +27,8 @@ Suggests:
     robustbase
 LinkingTo: 
     Rcpp (>= 0.12.6),
-    RcppEigen (>= 0.3.2.9.0)
+    RcppEigen (>= 0.3.2.9.0),
+    RcppArmadillo
 License: GPL (>= 2)
 LazyLoad: yes
 URL: https://github.com/PSegaert/mrfDepth
