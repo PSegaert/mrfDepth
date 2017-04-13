@@ -274,28 +274,28 @@ mfd <- function(x,
     warning(paste("Exact fits were detected for certain time points.",
                   "Their weights will be set to zero.",
                   "Check the returned results"),
-            call = FALSE)
+            call. = FALSE)
     Result$IndFlagExactFit <- warningIndFit
   }
   if (warningFlagBag == 1) {
     warning(paste("The bagplot could not be computed at all time points.",
                   "Their weights will be set to zero.",
                   "Check the returned results"),
-            call = FALSE)
+            call. = FALSE)
     Result$IndFlagBag <- warningIndBag
   }
   if (warningFlagIso == 1) {
     warning(paste("The isohdepth contours could not be computed at all", 
                   "time points. Their weights will be set to zero.",
                   "Check the returned results"),
-            call = FALSE)
+            call. = FALSE)
     Result$IndFlagIso <- warningIndIso
   }
   if (warningFlagAlpha  ==  1) {
     warning(paste("The specified alpha is too large at all time points.",
                   "Their weights will be set to zero.",
                   "Check the returned results"),
-            call = FALSE)
+            call. = FALSE)
     Result$IndFlagAlpha <- warningIndAlpha
   }
 

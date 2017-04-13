@@ -171,7 +171,7 @@ mfdmedian <- function(x,
   if (warningFlagFit == 1) {
     warning(paste("Exact fits were detected for certain time points.",
                   "Their weights will be set to zero.",
-                  " Check the returned results", call = FALSE)
+                  " Check the returned results", call. = FALSE)
             )
     Result$IndFlagExactFit <- warningIndFit
   }
