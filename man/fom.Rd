@@ -12,9 +12,9 @@ fom(fOutlResult, cutoff = FALSE)
   \item{cutoff}{Boolean indicating whether the cutoff should be drawn.}
 }
 \details{
-The fom is only applicable when \code{fOutl} is called with the following options: \code{diagnostic = TRUE}.
+The fom is only applicable when \code{fOutl} is called with the following options: \code{diagnostic = TRUE} and \code{type} equaling either \code{fAO} or \code{fDO}.
 
-The functional outlier map was proposed by Hubert et al. (2015) and subsequently improved by Rousseeuw et al. (2017). It consists of graphical tool to detect outliers in multivariate functional data based on functional outlyingness measures such as the \eqn{fAO} or \eqn{fDO} (see \code{fOutl}). Similar grpahical displays may be obtained by considering other functional outlyingness measures such as the \eqn{fBD} or \eqn{fSDO}. 
+The functional outlier map was proposed by Hubert et al. (2015) and subsequently improved by Rousseeuw et al. (2017). It consists of graphical tool to detect outliers in multivariate functional data based on functional outlyingness measures such as the \eqn{fAO} or \eqn{fDO} (see \code{fOutl}). 
 
 The coordinates of the points in the FOM correspond to two outlyingness indicators. On the horizontal axis, the functional outlyingness as obtained by the routine \code{\link{fOutl}} is plotted. On the vertical axis the scaled standard deviation of the cross-sectional outlyingness measures across time are plotted. The FOM thus consists of the following points representing the curve \eqn{i}: \eqn{(fOutl_i; std_j(fOutl_i(t_j)) / (1 + fOutl_i))}. The scaling of the standard deviation is added to ensure that curves with a different location, measured from the center, but with the same relative variability have a similar \eqn{y}-coordinate. 
 
