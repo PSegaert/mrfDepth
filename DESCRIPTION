@@ -11,7 +11,7 @@ Authors@R: c(
                    email = "Pieter.Segaert@kuleuven.be"),
             person(given="Mia",family="Hubert", role = c("aut")),
             person(given="Peter",family="Rousseeuw", role = c("aut")),
-            person(given="Jakob",family="Raymaekers", role = c("ctb")),
+            person(given="Jakob",family="Raymaekers", role = c("aut")),
             person(given="Kaveh",family="Vakili", role = c("ctb"))
              )
 Depends:
