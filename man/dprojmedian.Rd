@@ -39,7 +39,7 @@ dprojmedian(x, dprojection.depths = NULL, options = NULL)
                    the center of gravity of the bag.}
 }
 \seealso{
-  \code{\link{dirOutl}}, \code{\link{dprojdepth}}, \code{\link{outlyingness}}, \code{\link{projdepth}}, \code{\link{projmedian}}
+  \code{\link{dirOutl}}, \code{\link{dprojdepth}}, \code{\link{adjOutl}}, \code{\link{outlyingness}}
 }
 \references{
 Rousseeuw, P.J., Raymaekers, J., Hubert, M., (2016), A Measure of Directional Outlyingness with Applications to Image Data and Video. \emph{arXiv: 1608.05012}.\\

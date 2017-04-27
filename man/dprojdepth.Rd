@@ -73,7 +73,7 @@ dprojdepth(x, z = NULL, options = NULL)
                     The other observations receive a value FALSE.}
 }
 \seealso{
-  \code{\link{dirOutl}}, \code{\link{dprojmedian}}, \code{\link{mrainbowplot}}, \code{\link{outlyingness}}, \code{\link{projdepth}}, \code{\link{projmedian}}
+  \code{\link{dirOutl}}, \code{\link{dprojmedian}}, \code{\link{mrainbowplot}}, \code{\link{adjOutl}}, \code{\link{outlyingness}}
 }
 \references{
 Rousseeuw, P.J., Raymaekers, J., Hubert, M., (2016), A Measure of Directional Outlyingness with Applications to Image Data and Video. \emph{arXiv: 1608.05012}.\\

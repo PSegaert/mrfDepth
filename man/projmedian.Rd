@@ -47,7 +47,7 @@ projmedian(x, projection.depths = NULL, options = NULL)
                   \code{( sqrt(qchisq(0.95, p)) / outlyingness )^2.}}
 }
 \seealso{
-  \code{\link{outlyingness}}, \code{\link{projdepth}}, \code{\link{adjOutl}}, \code{\link{sprojdepth}}, \code{\link{sprojmedian}}
+  \code{\link{outlyingness}}, \code{\link{projdepth}}, \code{\link{adjOutl}}, \code{\link{dirOutl}}
 }
 \references{
  Zuo Y. (2003). Projection based depth functions and associated medians. \emph{The Annals of Statistics}, \bold{31}, 1460--1490.

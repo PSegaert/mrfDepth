@@ -39,7 +39,7 @@ sprojmedian(x, sprojection.depths = NULL, options = NULL)
                    the center of gravity of the bag.}
 }
 \seealso{
-  \code{\link{adjOutl}}, \code{\link{sprojdepth}}, \code{\link{outlyingness}}, \code{\link{projdepth}}, \code{\link{projmedian}}
+  \code{\link{adjOutl}}, \code{\link{sprojdepth}}, \code{\link{dirOutl}}, \code{\link{outlyingness}}
 }
 \references{
  Hubert M., Van der Veeken S. (2008). Outlier detection for skewed data. \emph{Journal of Chemometrics}, \bold{22}, 235--246.

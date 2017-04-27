@@ -48,7 +48,7 @@ The output values of this function are based on the output of the \code{outlying
   \item{inSubspace}{When a direction \eqn{v} is found such that the robust scale of \eqn{xv} is zero, the observations from \code{x} which belong to the hyperplane orthogonal to \eqn{v} receive a value TRUE. The other observations receive a value FALSE.}
 }
 \seealso{
-  \code{\link{outlyingness}}, \code{\link{projmedian}}, \code{\link{mrainbowplot}}, \code{\link{adjOutl}}, \code{\link{sprojdepth}}, \code{\link{sprojmedian}}
+  \code{\link{outlyingness}}, \code{\link{projmedian}}, \code{\link{mrainbowplot}}, \code{\link{adjOutl}}, \code{\link{dirOutl}}
 }
 \references{
  Zuo Y. (2003). Projection-based depth functions and associated medians.  \emph{The Annals of Statistics}, \bold{31}, 1460--1490.

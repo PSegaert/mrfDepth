@@ -90,7 +90,7 @@ A list with components: \cr
   \item{inSubspace}{When a direction \eqn{v} is found such that the robust scale of \eqn{xv} is zero, the observations from \code{x} which belong to the hyperplane orthogonal to \eqn{v} receive a value TRUE. The other observations receive a value FALSE.}
 }
 \seealso{
-  \code{\link{projdepth}}, \code{\link{projmedian}}, \code{\link{adjOutl}}, \code{\link{sprojdepth}}, \code{\link{sprojmedian}}
+  \code{\link{projdepth}}, \code{\link{projmedian}}, \code{\link{adjOutl}}, \code{\link{dirOutl}}
   }
 
 \references{

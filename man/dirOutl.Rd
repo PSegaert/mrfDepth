@@ -67,7 +67,7 @@ It is first checked whether the data lie in a subspace of dimension smaller than
   \item{inSubspace}{When a direction \eqn{v} is found such that DO(\eqn{xv}) is ill-defined, the observations from \code{x} which belong to the hyperplane orthogonal to \eqn{v} receive a value TRUE. The other observations receive a value FALSE.}
 }
 \seealso{
-  \code{\link{dprojdepth}}, \code{\link{dprojmedian}}, \code{\link{outlyingness}}, \code{\link{projdepth}}, \code{\link{projmedian}}
+  \code{\link{dprojdepth}}, \code{\link{dprojmedian}}, \code{\link{adjOutl}}, \code{\link{outlyingness}}
 
 
 }

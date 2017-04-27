@@ -77,7 +77,7 @@ sprojdepth(x, z = NULL, options = NULL)
                     The other observations receive a value FALSE.}
 }
 \seealso{
-  \code{\link{adjOutl}}, \code{\link{sprojmedian}}, \code{\link{mrainbowplot}}, \code{\link{outlyingness}}, \code{\link{projdepth}}, \code{\link{projmedian}}
+  \code{\link{adjOutl}}, \code{\link{sprojmedian}}, \code{\link{mrainbowplot}}, \code{\link{dirOutl}}, \code{\link{outlyingness}}
 }
 \references{
  Hubert M., Van der Veeken S. (2008). Outlier detection for skewed data. \emph{Journal of Chemometrics}, \bold{22}, 235--246.

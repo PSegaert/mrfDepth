@@ -79,7 +79,7 @@ This function extends the \code{adjOutlyingness} function in the package \code{r
   \item{inSubspace}{When a direction \eqn{v} is found such that AO(\eqn{xv}) is ill-defined, the observations from \code{x} which belong to the hyperplane orthogonal to \eqn{v} receive a value TRUE. The other observations receive a value FALSE.}
 }
 \seealso{
-  \code{\link{sprojdepth}}, \code{\link{sprojmedian}}, \code{\link{outlyingness}}, \code{\link{projdepth}}, \code{\link{projmedian}}
+  \code{\link{sprojdepth}}, \code{\link{sprojmedian}}, \code{\link{dirOutl}}, \code{\link{outlyingness}}
 
   \code{\link[robustbase]{adjbox}}, \code{\link[robustbase]{adjOutlyingness}} from package robustbase.
 
