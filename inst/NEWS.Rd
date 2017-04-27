@@ -4,7 +4,9 @@
 
 \section{Changes in version 1.0.4 (2017-XX-XX)}{
 \itemize{
-    \item 
+    \item FEATURE: directional outlyingness now available
+                   dirOutl, dprojdepth, dprojmedian
+    \item BUGFIX: Call to warning updated in various functions, per new R call
  }
 }
 
