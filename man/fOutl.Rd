@@ -25,7 +25,7 @@ functional data.
     \item{type}{The depth used in the computations.
                 The outlyingness measure used in the computations.
                 One of the following options: \code{"fSDO"},
-                \code{"fAO"}, or \code{"fbd"}. \cr
+                \code{"fAO"}, \code{"fDO"} or \code{"fbd"}. \cr
                 Defaults to \code{"fAO"}.}
    \item{alpha}{Specifies the weights at every cross-section. 
                 When \code{alpha = 0}, uniform weights are used. Otherwise

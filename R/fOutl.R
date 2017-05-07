@@ -171,19 +171,18 @@ fOutl <- function(x,
       }
     }
     else if (type == "fDO") {
-      stop("Not yet implemented.")
-      # temp <- dirOutl(x = xTimePoint,
-      #                 z = zTimePoint,
-      #                 options = distOptions)
-      # if (!is.null(temp$outlyingnessZ)) {
-      #   distTimeX[,j] <- temp$outlyingnessX
-      #   distTimeZ[,j] <- temp$outlyingnessZ
-      #   locOutlX[,j] <- as.numeric(!temp$flagX)
-      #   locOutlZ[,j] <- as.numeric(!temp$flagZ)
-      # }
-      # else{
-      #   exactfit <- 1
-      # }
+      temp <- dirOutl(x = xTimePoint,
+                      z = zTimePoint,
+                      options = distOptions)
+      if (!is.null(temp$outlyingnessZ)) {
+        distTimeX[,j] <- temp$outlyingnessX
+        distTimeZ[,j] <- temp$outlyingnessZ
+        locOutlX[,j] <- as.numeric(!temp$flagX)
+        locOutlZ[,j] <- as.numeric(!temp$flagZ)
+      }
+      else{
+        exactfit <- 1
+      }
     }
     else if (type == "fbd") {
       temp <- bagdistance(x = xTimePoint,

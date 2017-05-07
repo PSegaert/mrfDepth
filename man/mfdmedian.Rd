@@ -17,13 +17,13 @@ for multivariate functional data.
                 for every functional observation at every time point.}
     \item{type}{The depth used in the computations.
                 One of the following options: \code{"hdepth"},
-                \code{"projdepth"}, \code{"sprojdepth"}, \code{"sdepth"}. \cr
-                Defaults to \code{"hdepth"}.}
+                \code{"projdepth"}, \code{"sprojdepth"}, \code{"dprojdepth"},
+                \code{"sdepth"}. \cr  Defaults to \code{"hdepth"}.}
 \item{crossDepthsX}{Depths at each time point. Can be used to save time}
 \item{depthOptions}{A list of options to pass to the function
                     calculating the cross-sectional depths. \cr
                     See \code{hdepth}, \code{projdepth}, \code{sprojdepth},
-                    or \code{sdepth}.}
+                    \code{dprojdepth} or \code{sdepth}.}
 \item{centerOption}{By default the 'maxdepth' center estimate is used for the
                      projmedian and the sprojmedian. This can be changed by setting
                      centerOption to 'gravity' or 'Huber' depending on wheter

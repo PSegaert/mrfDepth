@@ -23,8 +23,8 @@ Computes the multivariate functional depth for multivariate functional data.
                 \code{x}. }
     \item{type}{The depth used in the computations.
                 One of the following options: \code{"hdepth"},
-                \code{"projdepth"}, \code{"sprojdepth"}, \code{"sdepth"}. \cr
-                Defaults to \code{"hdepth"}.}
+                \code{"projdepth"}, \code{"sprojdepth"}, \code{"dprojdepth"},
+                \code{"sdepth"}. \cr  Defaults to \code{"hdepth"}.}
    \item{alpha}{Specifies the weights at every cross-section. 
                 When \code{alpha = 0}, uniform weights are used. Weights 
                 following equation (2) in Claeskens et al. (2014) are obtained 
@@ -48,7 +48,7 @@ Computes the multivariate functional depth for multivariate functional data.
 \item{depthOptions}{A list of options to pass to the function
                     calculating the cross-sectional depths. \cr
                     See \code{hdepth}, \code{projdepth}, \code{sprojdepth},
-                    or \code{sdepth}.}
+                    \code{dprojdepth} or \code{sdepth}.}
 }
 \details{
 The multivariate functional depth of a multivariate curve with respect to a 
@@ -139,7 +139,7 @@ In \emph{Proceedings of COMPSTAT 2012, edited by A. Colubi, K. Fokianos, G. Gonz
  
 }
 
-\seealso{\code{\link{depthContour}}, \code{\link{hdepth}}, \code{\link{projdepth}}, \code{\link{sprojdepth}}, \code{\link{sdepth}}}
+\seealso{\code{\link{depthContour}}, \code{\link{hdepth}}, \code{\link{projdepth}}, \code{\link{sprojdepth}}, \code{\link{dprojdepth}}, \code{\link{sdepth}}}
 
 \examples{
 data(octane)
