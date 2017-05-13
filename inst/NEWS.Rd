@@ -4,8 +4,10 @@
 
 \section{Changes in version 1.0.4 (2017-XX-XX)}{
 \itemize{
-    \item FEATURE: directional outlyingness now available
+    \item FEATURE: DO or directional outlyingness now available
                    dirOutl, dprojdepth, dprojmedian
+    \item FEATURE: functional measures now also have option for directional outlyingness. 
+                   fOutl, mfd, mfdmedian
     \item BUGFIX: Call to warning updated in various functions, per new R call
  }
 }
