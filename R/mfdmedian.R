@@ -149,7 +149,7 @@ mfdmedian <- function(x,
         temp <- dprojmedian(x = xTimePoint, options = depthOptions)
       } else{
         temp <- dprojmedian(x = xTimePoint,
-                            sprojection.depths =  crossDepthsX[,j])
+                            dprojection.depths =  crossDepthsX[,j])
       }
       if (!is.null(temp$max)) {
         if (centerOption == 1) {
