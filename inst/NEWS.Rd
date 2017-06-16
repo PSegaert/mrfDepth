@@ -4,7 +4,7 @@
 
 \section{Changes in version 1.0.5 (2017-06-16)}{
 \itemize{
-    \item BUGFIX: Nugfix for Solaris as requested by CRAN.
+    \item BUGFIX: Bugfix for Solaris as requested by CRAN.
  }
 }
 
