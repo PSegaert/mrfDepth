@@ -2,6 +2,13 @@
 \title{News for package "mrfDepth"}
 \encoding{UTF-8}
 
+\section{Changes in version 1.0.5 (2017-06-16)}{
+\itemize{
+    \item BUGFIX: Nugfix for Solaris as requested by CRAN.
+ }
+}
+
+
 \section{Changes in version 1.0.4 (2017-06-13)}{
 \itemize{
     \item FEATURE: DO or directional outlyingness now available
