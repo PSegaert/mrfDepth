@@ -82,7 +82,7 @@ Splitsampleresult FastSplitSample(vec univariateSample)
   // Assumes that NAs have already been removed.
   // This function has time complexity O(n) if median has this complexity
   
-  const int h = (int)floor(univariateSample.size() / 2);
+  const int h = (int)(univariateSample.size() / 2);
   Splitsampleresult result = { zeros<vec>(h),zeros<vec>(h),0 };
   result.med = median(univariateSample);
   univariateSample = univariateSample - result.med;
