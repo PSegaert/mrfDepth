@@ -48,6 +48,6 @@ export(bagplot)
 export(fom)
 #export(centralregion)
 #export(dispersioncurve)
-export(fheatmap)
+#export(fheatmap)
 #export(scalecurve)
 
