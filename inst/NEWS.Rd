@@ -2,9 +2,13 @@
 \title{News for package "mrfDepth"}
 \encoding{UTF-8}
 
-\section{Changes in version 1.0.5 (2017-06-16)}{
+\section{Changes in version 1.0.5 (2017-10-15)}{
 \itemize{
     \item BUGFIX: Bugfix for Solaris as requested by CRAN.
+                  -> Fixing "dirOutl.h:85:55: error""
+    \item BUGFIX: Bugfix for Windows and Solaris as requested by CRAN.
+                  -> Makevars.win file
+    \item BUGFIX: Corrections of typos in manuals 
  }
 }
 
