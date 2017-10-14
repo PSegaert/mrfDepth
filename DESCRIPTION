@@ -1,7 +1,7 @@
 Package: mrfDepth
 Type: Package
 Version: 1.0.5
-Date: 2017-06-16
+Date: 2017-10-15
 Title: Depth Measures in Multivariate, Regression and Functional Settings
 Description: Tools to compute depth measures and implementations of related 
              tasks such as outlier detection, data exploration and 
@@ -22,12 +22,12 @@ Imports:
     geometry,
     grid,
     matrixStats,
-    reshape2
+    reshape2,
 Suggests:
     robustbase
 LinkingTo: 
-    Rcpp (>= 0.12.6),
     RcppEigen (>= 0.3.2.9.0),
+    Rcpp (>= 0.12.6),
     RcppArmadillo (>= 0.7.600.1.0)
 License: GPL (>= 2)
 LazyLoad: yes
