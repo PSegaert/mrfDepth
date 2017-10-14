@@ -1,5 +1,5 @@
 ## Use the R_HOME indirection to support installations of multiple R version
-PKG_CPPFLAGS = -I../inst/include
+PKG_CPPFLAGS = -I../inst/include 
 PKG_CXXFLAGS = -DEIGEN_DONT_PARALLELIZE $(SHLIB_OPENMP_CXXFLAGS)
 PKG_LIBS = `$(R_HOME)/bin/Rscript -e "Rcpp:::LdFlags()"` $(SHLIB_OPENMP_CXXFLAGS)
 CXX_STD = CXX11

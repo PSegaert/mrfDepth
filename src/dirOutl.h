@@ -1,5 +1,7 @@
 #define ARMA_DONT_PRINT_ERRORS
-#include <RcppArmadillo.h>
+#include "RcppArmadillo.h"
+#include "omp.h"
+
  RcppExport SEXP dirOutl_cpp(SEXP DATAX, SEXP DATAZ, SEXP TYPE,SEXP NDIR, SEXP RMZEROES, SEXP MAXRATIO,SEXP PRECSCALE);
 
 
