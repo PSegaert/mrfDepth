@@ -2,6 +2,25 @@
 \title{News for package "mrfDepth"}
 \encoding{UTF-8}
 
+
+\section{Changes in version 1.0.7 (2017-12-01)}{
+\itemize{
+    \item Updated random number generator for normal distribution.
+ }
+}
+
+
+\section{Changes in version 1.0.6 (2017-11-20)}{
+\itemize{
+    \item BUGFIX: Changed internal call
+                  compiler:::cmpfun
+                  to 
+                  compiler::cmpfun
+                  as requested by CRAN.
+ }
+}
+
+
 \section{Changes in version 1.0.5 (2017-10-15)}{
 \itemize{
     \item BUGFIX: Bugfix for Solaris as requested by CRAN.
