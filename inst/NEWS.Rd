@@ -5,7 +5,16 @@
 
 \section{Changes in version 1.0.7 (2017-12-01)}{
 \itemize{
-    \item Updated random number generator for normal distribution.
+    \item Feature: Added functional data examples of MFOD / MFC paper: 
+                   characterA,
+                   characterI,
+                   mri,
+                   plane,
+                   tables,
+                   wine
+                   
+    \item MISC: Documentation of random number generator 
+                for normal distribution used by FORTRAN code.
  }
 }
 
