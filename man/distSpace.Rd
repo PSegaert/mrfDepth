@@ -28,8 +28,7 @@ Different options are available to calculate the distance to each of the trainin
 A matrix \code{q x (p+1)} composed of two blocks. The first block contains in each row an observations in the training set with in each column the distance to each of the training sets. The last column contains a label indicating the original group membership of the observation. The second block contains the observations in the test set, if any, with in each column the distance to the different training sets. The last column now contains an inddicator signalling the observations was part of the test set. 
 }
 \references{
-Hubert M., Rousseeuw P.J., Segaert P. (2016). Multivariate and functional classification using depth and distance.
-\emph{Advances in Data Analysis and Classification,} in press.
+Hubert M., Rousseeuw P.J., Segaert P. (2017). Multivariate and functional classification using depth and distance. \emph{Advances in Data Analysis and Classification}, 11(3), 445-466.
 }
 \author{P. Segaert}
 
