@@ -16,9 +16,9 @@ fom <- function(fOutlResult, cutoff = FALSE){
   if (!("distType" %in% InputNames)) {
     stop("fOutlResult must be a list returned from a call to fOutl.")
   }
-  if (!(fOutlResult$distType %in% c("fAO", "fDO"))) {
-    stop("The fom is only implemented voor fAO and fDO.")
-  }
+  # if (!(fOutlResult$distType %in% c("fAO", "fDO"))) {
+  #   stop("The fom is only implemented voor fAO and fDO.")
+  # }
   if (!("weights" %in% InputNames)) {
     stop("fOutlResult must be a list returned from a call to fOutl.")
   }

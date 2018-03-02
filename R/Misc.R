@@ -32,7 +32,7 @@ GridPlot <- function(plotlist = NULL, layout = NULL) {
   }
 }
 
-matSubstract.c <- compiler:::cmpfun(function(mat, Center, n.row) {
+matSubstract.c <- compiler::cmpfun(function(mat, Center, n.row) {
   mat - rep(1, n.row) %*% Center
 })
 
