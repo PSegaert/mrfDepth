@@ -56,8 +56,8 @@ Claeskens G., Hubert M., Slaets L., Vakili K. (2014). Multivariate functional ha
 }
 \examples{
 # We will illustrate the function using a bivariate functional sample.
-data(characterTrajectories)
-Data <- characterTrajectories[,1:50,]
+data(characterA)
+Data <- characterA[,1:50,]
 Result <- mfdmedian(Data)
 
 par(mfrow = c(1,2))
