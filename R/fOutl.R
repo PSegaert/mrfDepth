@@ -63,7 +63,7 @@ fOutl <- function(x,
     stop("alpha must be numeric")
   }
   else if (is.vector(alpha)) {
-   if(alpha != 0) {
+   if (alpha != 0) {
      stop("Only the value 0 for alpha is allowed.")
    }
   }
@@ -71,7 +71,7 @@ fOutl <- function(x,
     NRowAlpha <- dim(alpha)[1]
     NColAlpha <- dim(alpha)[2]
     if (NRowAlpha != 1 || NColAlpha != t1) {
-      stop("alpha must be a (1xt)-row matrix.")
+      stop("alpha must be a (1xt)-matrix.")
     }
   }
   else{
@@ -110,15 +110,15 @@ fOutl <- function(x,
   if (!is.list(distOptions)) {
     stop("distOptions must be a list")
   }
-
-
-  weights <- rep(1, t1)
+  
   distTimeX <- matrix(NA, nrow = n1, ncol = t1)
   distTimeZ <- matrix(0.0, nrow = n2, ncol = t2)
   locOutlX <- matrix(NA, nrow = n1, ncol = t1)
   locOutlZ <- matrix(0, nrow = n2, ncol = t2)
   if (is.matrix(alpha)) {
-    weights <- alpha
+    weights <- as.vector(alpha)
+  } else{
+    weights <- rep(1, t1)
   }
 
   warningFlagFit <- 0
@@ -199,15 +199,15 @@ fOutl <- function(x,
 
     #Check if exact fit needs handling later on
     if (exactfit) {
-      weights[j] <- 0
+      weights[j]     <- 0
       warningFlagFit <- 1
-      warningIndFit <- c(warningIndFit, j)
+      warningIndFit  <- c(warningIndFit, j)
     }
 
   }
 
   options(warn = Original$warn)
-
+  distTimeX[, which(weights == 0)] = 0 # deals with potential NAs
   weights <- weights * dTime
   weights <- weights / sum(weights)
   fOutlX <- distTimeX %*% weights
