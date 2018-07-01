@@ -5,7 +5,7 @@
 
 \section{Changes in version 1.0.8 (2018-07-08)}{
 \itemize{
-    \item 
+    \item MISC: Change of maintainer mail adress in preparation of affiliation change.
  }
 }
 
