@@ -3,7 +3,16 @@
 \encoding{UTF-8}
 
 
-\section{Changes in version 1.0.7 (2017-12-01)}{
+\section{Changes in version 1.0.8 (2018-07-08)}{
+\itemize{
+    \item 
+ }
+}
+
+
+
+
+\section{Changes in version 1.0.7 (2018-07-01)}{
 \itemize{
     \item Feature: Added functional data examples of MFOD / MFC paper: 
                    characterA,
