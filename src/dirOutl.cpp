@@ -37,11 +37,9 @@ SEXP dirOutl_cpp(SEXP DATAX, SEXP DATAZ, SEXP TYPE,SEXP NDIR, SEXP RMZEROES, SEX
       generDirresult dirtemp = GenerDir(datax, type, ndir, precScale);
       mat directions = dirtemp.directions;
       singularsubsets = dirtemp.singularsubsets;
-      
       // Project data on the generated directions
       mat Yx = datax * directions.t(); 
       mat Yz = dataz * directions.t(); 
-      
       // Check for zero scales
       uword i = 0;
       do 
@@ -49,12 +47,11 @@ SEXP dirOutl_cpp(SEXP DATAX, SEXP DATAZ, SEXP TYPE,SEXP NDIR, SEXP RMZEROES, SEX
         if ((median(abs(Yx.col(i) - median(Yx.col(i))))) < precScale)
         {
           error_code = 1;
-          hyperplane = directions.row(i);
+          hyperplane = directions.row(i).t();
         }
         i++;
       }
       while ((i < Yx.n_cols) && (error_code==0));
-      
       
       // Continue if no zero scales
       if(error_code == 0)
@@ -76,7 +73,6 @@ SEXP dirOutl_cpp(SEXP DATAX, SEXP DATAZ, SEXP TYPE,SEXP NDIR, SEXP RMZEROES, SEX
         {
           outlyingnessZ(i) = max(Yz.row(i));
         }
-        
       }
     }
     if(type == 0) // componentwise
@@ -87,11 +83,11 @@ SEXP dirOutl_cpp(SEXP DATAX, SEXP DATAZ, SEXP TYPE,SEXP NDIR, SEXP RMZEROES, SEX
         tempresult.subvec(0, (datax.n_rows - 1)) = datax.col(i);
         tempresult.subvec(datax.n_rows, (datax.n_rows + dataz.n_rows - 1)) = dataz.col(i);
         tempresult = DO_univ(datax.col(i), tempresult, rmZeroes, maxRatio, precScale).diroutl;
-        outlyingnessX =  outlyingnessX + pow(tempresult.subvec(0, (datax.n_rows - 1)),2);
-        outlyingnessZ = outlyingnessZ + pow(tempresult.subvec(datax.n_rows, (datax.n_rows + dataz.n_rows - 1)),2);
+        outlyingnessX = outlyingnessX + arma::pow(tempresult.subvec(0, (datax.n_rows - 1)),2);
+        outlyingnessZ = outlyingnessZ + arma::pow(tempresult.subvec(datax.n_rows, (datax.n_rows + dataz.n_rows - 1)),2);
       }
-      outlyingnessX = square(outlyingnessX);
-      outlyingnessZ = square(outlyingnessZ);
+      outlyingnessX = arma::sqrt(outlyingnessX);
+      outlyingnessZ = arma::sqrt(outlyingnessZ);
     }
     
     return List::create( Named("outlyingnessX") = outlyingnessX,

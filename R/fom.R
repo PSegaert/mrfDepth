@@ -16,9 +16,6 @@ fom <- function(fOutlResult, cutoff = FALSE){
   if (!("distType" %in% InputNames)) {
     stop("fOutlResult must be a list returned from a call to fOutl.")
   }
-  # if (!(fOutlResult$distType %in% c("fAO", "fDO"))) {
-  #   stop("The fom is only implemented voor fAO and fDO.")
-  # }
   if (!("weights" %in% InputNames)) {
     stop("fOutlResult must be a list returned from a call to fOutl.")
   }
@@ -38,11 +35,16 @@ fom <- function(fOutlResult, cutoff = FALSE){
   #Make local variables
   AOValues <- fOutlResult$crossDistsX
   fAO <- AOValues %*% fOutlResult$weights
+  sdAO = apply(AOValues, 1, FUN = function(y)
+    sqrt(sum(fOutlResult$weights * (y - sum(fOutlResult$weights*y,na.rm = TRUE))^2,
+             na.rm = TRUE) /
+           (1 - 1/length(fOutlResult$weights)))) # weighted sd
+  
   LocOutl <- rowSums(fOutlResult$locOutlX)
 
   PlotData <- data.frame(row.names = 1:NFunc)
   PlotData$fAO <- fAO
-  PlotData$DispMeasure <- rowSds(AOValues) / (1 + fAO)
+  PlotData$DispMeasure <- sdAO / (1 + fAO)
   PlotData$Shape <- rep(16, NFunc)
   PlotData$Shape[which(LocOutl >= 0.25 * NTObs)] <- 17
   PlotData$Shape[which(LocOutl >= 0.5 * NTObs)] <- 15

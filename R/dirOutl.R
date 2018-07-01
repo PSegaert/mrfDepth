@@ -43,24 +43,27 @@ dirOutl <- function(x, z = NULL, options = list()){
   if (!is.list(options)) {
     stop("options must be a list")
   }
-  if ("type" %in% names(options)) {
+  if (p1 == 1) {
+    type <- 0
+  } else if ("type" %in% names(options)) {
     type <- options[["type"]]
-    if(type == "compWise") {
+    if (type == "compWise") {
       type <- 0
     }
-    if(type == "Affine") {
+    if (type == "Affine") {
       type <- 1
     }
-    if(type == "Rotation") {
+    if (type == "Rotation") {
       type <- 2
     }
-    if(type == "Shift") {
+    if (type == "Shift") {
       type <- 3
     }
-
+    
   } else {
     type <- 1 # Default "Affine"
   }
+
   if ("ndir"  %in% names(options)) {
     ndir <- options[["ndir"]]
   } else {
@@ -95,13 +98,19 @@ dirOutl <- function(x, z = NULL, options = list()){
   }
   if ("maxRatio"  %in% names(options)) {
     maxRatio   <- options[["maxRatio"]]
-    if(maxRatio > 0 && maxRatio < 2){
+    if (maxRatio > 0 && maxRatio < 2){
       stop("maxRatio should be either 0 or larger than 2")
     }
   } else {
     maxRatio   <- 0
   }
+  if ("EFcheck"  %in% names(options)) {
+    EFcheck   <- options[["EFcheck"]]
+  } else {
+    EFcheck   <- TRUE
+  }
   
+  if (EFcheck) {
   # Check data for possible exact fit situations.
   tol <- 1e-7
   scaled.x <- scale(x)
@@ -152,20 +161,21 @@ dirOutl <- function(x, z = NULL, options = list()){
     class(returned.result) <- c("mrfDepth", "dirOutl")
     return(returned.result)
   }
+  }
   set.seed(seed)
   res <- tryCatch( .Call("dirOutl_cpp", x, z, type, ndir, rmZeroes, maxRatio, precScale, 
                          PACKAGE = "mrfDepth"),
                    "std::range_error" = function(e){
                      conditionMessage( e ) })
   
-  if( res$error_code == 1){
+  if (res$error_code == 1){
     warning("A direction was found for which the robust scale
               estimate equals\n zero. See the help page for more details.",
             call. = FALSE)
     
     hyperplane <- res$hyperplane
     datat <- x %*% hyperplane
-    inSubspace <-  (abs(datat-median(datat)) < 1e-10)
+    inSubspace <-  (abs(datat - median(datat)) < 1e-10)
     returned.result <- list(outlyingnessX = NULL, outlyingnessZ = NULL,
                             cutoff = NULL, flagX = NULL, flagZ = NULL,
                             singularSubsets = NULL, dimension = NULL,
