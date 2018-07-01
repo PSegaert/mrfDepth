@@ -2,8 +2,7 @@
 .Rhistory
 .RData
 .Ruserdata
+mrfDepth.Rproj
 src/*.o
 src/*.so
 src/*.dll
-
-mrfDepth.Rproj
