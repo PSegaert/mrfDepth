@@ -1,6 +1,6 @@
 Package: mrfDepth
 Type: Package
-Version: 1.0.7.9000
+Version: 1.0.8
 Date: 2018-07-08
 Title: Depth Measures in Multivariate, Regression and Functional Settings
 Description: Tools to compute depth measures and implementations of related 
@@ -8,7 +8,7 @@ Description: Tools to compute depth measures and implementations of related
             classification of multivariate, regression and functional data.
 Authors@R: c(
             person(given="Pieter",family="Segaert", role = c("aut", "cre"), 
-                   email = "mrfDepth@gmail.com"),
+                   email = "mrfdepth@gmail.com"),
             person(given="Mia",family="Hubert", role = c("aut")),
             person(given="Peter",family="Rousseeuw", role = c("aut")),
             person(given="Jakob",family="Raymaekers", role = c("aut")),
