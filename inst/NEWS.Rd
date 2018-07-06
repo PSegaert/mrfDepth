@@ -5,7 +5,10 @@
 
 \section{Changes in version 1.0.8 (2018-07-08)}{
 \itemize{
+    \item BUGFIX: Componentwise option of Directional Outlylingness fixed
+    \item Feature: Weighted sd implemented in FOM
     \item MISC: Change of maintainer mail adress in preparation of affiliation change.
+    \item MISC: Cleanup of C++ code for Directional Outlyingness
  }
 }
 
