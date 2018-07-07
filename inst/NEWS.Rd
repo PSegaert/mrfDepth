@@ -3,6 +3,18 @@
 \encoding{UTF-8}
 
 
+
+
+
+
+\section{Changes in version 1.0.9 (2018-XX-XX)}{
+\itemize{
+ }
+}
+
+
+
+
 \section{Changes in version 1.0.8 (2018-07-08)}{
 \itemize{
     \item BUGFIX: Componentwise option of Directional Outlylingness fixed
