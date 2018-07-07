@@ -8,7 +8,7 @@ Description: Tools to compute depth measures and implementations of related
             classification of multivariate, regression and functional data.
 Authors@R: c(
             person(given="Pieter",family="Segaert", role = c("aut", "cre"), 
-                   email = "mrfdepth@gmail.com"),
+                   email = "Pieter.Segaert@kuleuven.be"),
             person(given="Mia",family="Hubert", role = c("aut")),
             person(given="Peter",family="Rousseeuw", role = c("aut")),
             person(given="Jakob",family="Raymaekers", role = c("aut")),
