@@ -9,10 +9,7 @@
 
 \section{Changes in version 1.0.9 (2018-XX-XX)}{
 \itemize{
-<<<<<<< HEAD
     \item MISC: Change of maintainer mail adress in preparation of affiliation change.
-=======
->>>>>>> 015146e3bec271f2bc02b10d6f80772bdbd44017
  }
 }
 
