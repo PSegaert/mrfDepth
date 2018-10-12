@@ -127,7 +127,7 @@ distSpace <- function(trainingData,
       }
       dims <- dim(testData)
       nObsTest <- dims[length(dims) - 1]
-      nObsTest <- dims[length(dims)]
+      nColTest <- dims[length(dims)]
       if (nColTest != dimP) {
         stop(paste("The number of variables should be the same across all groups.",
                    " The testing group does not have the same dimensions as",
@@ -150,11 +150,11 @@ distSpace <- function(trainingData,
 
   # Check type
   Indtype <- match(type, c("bagdistance", "outlyingness", "adjOutl",
-                           "fBD", "fSDO", "fAO"))[1]
+                           "fbd", "fSDO", "fAO"))[1]
   if (is.na(Indtype)) {
     stop(paste("The input argument type should be one of bagdistance",
                "outlyingness or adjOutl for multivariate data and one",
-               "of fBD, fSDO or fAO for functional data")
+               "of fbd, fSDO or fAO for functional data")
          )
   }
   if (dataType == "multivariate" & Indtype > 3) {
@@ -163,7 +163,7 @@ distSpace <- function(trainingData,
          )
   }
   if (dataType == "functional" & Indtype < 4) {
-    stop(paste("The input argument type should be one of fBD,", 
+    stop(paste("The input argument type should be one of fbd,", 
                "fSDO or fAO for functional data")
          )
   }
@@ -218,7 +218,7 @@ distSpace <- function(trainingData,
       dataToCalcDist <- abind(dataToCalcDist, trainingData[[i]], along = length(dims) - 1)
     }
     if (nObsTest > 1) {
-      dataToCalcDist <- abind(dataToCalcDist, testData)
+      dataToCalcDist <- abind(dataToCalcDist, testData, along = length(dims) - 1)
     }
   }
 

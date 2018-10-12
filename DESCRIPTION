@@ -1,7 +1,7 @@
 Package: mrfDepth
 Type: Package
-Version: 1.0.9.
-Date: 2018-08-01
+Version: 1.0.10
+Date: 2018-10-12
 Title: Depth Measures in Multivariate, Regression and Functional Settings
 Description: Tools to compute depth measures and implementations of related 
              tasks such as outlier detection, data exploration and 
@@ -33,3 +33,4 @@ License: GPL (>= 2)
 LazyLoad: yes
 URL: https://github.com/PSegaert/mrfDepth
 BugReports: https://github.com/PSegaert/mrfDepth/issues
+RoxygenNote: 6.1.0

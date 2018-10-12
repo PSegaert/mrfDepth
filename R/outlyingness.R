@@ -228,7 +228,10 @@ outlyingness <- function(x, z=NULL, options=list()) {
                 PACKAGE = "mrfDepth")
 
   Outlyingness <- Result[[5]]
-  cutoff <- sqrt(qchisq(0.99, p1)) * median(Outlyingness[1:n1])
+  
+  LO <- log(0.1 + Outlyingness[1:n1])
+  cutoff <- exp(median(LO) + mad(LO) * qnorm(0.995)) - 0.1
+  
   flag.x <- (Outlyingness[1:n1] <= cutoff)
   flag.z <- (Outlyingness[(n1 + 1):(n1 + n2)] <= cutoff)
 

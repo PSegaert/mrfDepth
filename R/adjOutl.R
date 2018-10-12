@@ -223,8 +223,10 @@ adjOutl <- function(x, z = NULL, options = list()){
     return(returned.result)
   }
 
-  cutoff <- sqrt(qchisq(0.99, p1)) * median(adj.outlyingness[1:n1])
-
+  LAO <- log(0.1 + adj.outlyingness[1:n1])
+  cutoff <- exp(median(LAO) + mad(LAO) * qnorm(0.995)) - 0.1
+  
+  
   flag.X <- adj.outlyingness[1:n1] <= cutoff
   flag.Z <- adj.outlyingness[(n1 + 1):(n1 + n2)] <= cutoff
 

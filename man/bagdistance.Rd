@@ -56,7 +56,7 @@ An observation from \code{z} is flagged as an outlier if its bagdistance exceeds
 \references{
 Hubert M., Rousseeuw P.J., Segaert P. (2015). Multivariate functional outlier detection. \emph{Statistical Methods & Applications}, \bold{24}, 177--202.
 
-Hubert M., Rousseeuw P.J., Segaert P. (2016). Multivariate and functional classification using depth and distance. \emph{Advances in Data Analysis and Classification}
+Hubert M., Rousseeuw P.J., Segaert P. (2017). Multivariate and functional classification using depth and distance. \emph{Advances in Data Analysis and Classification}, \bold{11}, 445--466.
 }
 
 \author{P. Segaert. }

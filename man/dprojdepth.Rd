@@ -76,7 +76,7 @@ dprojdepth(x, z = NULL, options = NULL)
   \code{\link{dirOutl}}, \code{\link{dprojmedian}}, \code{\link{mrainbowplot}}, \code{\link{adjOutl}}, \code{\link{outlyingness}}
 }
 \references{
-Rousseeuw, P.J., Raymaekers, J., Hubert, M., (2016), A Measure of Directional Outlyingness with Applications to Image Data and Video. \emph{arXiv: 1608.05012}.\\
+Rousseeuw, P.J., Raymaekers, J., Hubert, M., (2018), A Measure of Directional Outlyingness with Applications to Image Data and Video. \emph{Journal of Computational and Graphical Statistics}, \bold{27}, 345--359.\\
 }
 \author{J. Raymaekers}
 \examples{

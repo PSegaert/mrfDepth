@@ -114,8 +114,7 @@ indices of the time points where problems occured.
 Hubert M., Rousseeuw P.J., Segaert P. (2015). Multivariate functional outlier detection.
 \emph{Statistical Methods and Applications,} \bold{24}(2), 177--202.
 
-Hubert M., Rousseeuw P.J., Segaert P. (2016). Multivariate and functional classification using depth and distance.
-\emph{Advances in Data Analysis and Classification,} in press.
+Hubert M., Rousseeuw P.J., Segaert P. (2017). Multivariate and functional classification using depth and distance. \emph{Advances in Data Analysis and Classification}, \bold{11}, 445--466.
 
 }
 \seealso{\code{\link{bagdistance}}, \code{\link{outlyingness}}, \code{\link{adjOutl}}}

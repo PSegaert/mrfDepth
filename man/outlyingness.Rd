@@ -63,7 +63,7 @@ Depending on the dimension \eqn{p}, different approximate algorithms are impleme
 
 The resulting  Stahel-Donoho outlyingness values are invariant to affine transformations, rotations and shifts respectively provided that the \code{seed} is kept fixed at different runs of the algorithm. Note that the SDO values are guaranteed to increase when more directions are considered provided the seed is kept fixed, as this ensures that the random directions are generated in a fixed order.
 
-An observation from \code{x} and \code{z} is flagged as an outlier if its SDO exceeds a cutoff value. This cutoff is equal to the squareroot of the 0.99 quantile of the chi-squared distribution with \eqn{p} degrees of freedom, multiplied by the median of the SDO values from the \code{x} matrix.
+An observation from \code{x} and \code{z} is flagged as an outlier if its SDO exceeds a cutoff value. This cutoff value is determined using the procedure in Rousseeuw et al. (2018). First, the logarithm of the SDO values is taken to render their distribution more symmetric, after which a normal approximation yields a cutoff on these values. The cutoff is then transformed back by applying the exponential function.
 
 It is first checked whether the data lie in a subspace of dimension smaller than \eqn{p}. If so, a warning is given, as well as the dimension of the subspace and a direction which is orthogonal to it. Moreover, from the definition of the Stahel-Donoho outlyingness it follows that the outlyingness is ill-defined when the robust scale of the data projected on the direction \eqn{v} equals zero. In this case the algorithm will stop and give a warning. The returned values then include the direction \eqn{v} as well as an indicator specifying which of the observations of \code{x} belong to the hyperplane orthogonal to \eqn{v}.
 
@@ -100,6 +100,7 @@ Donoho D.L. (1982). Breakdown properties of multivariate location estimators. Ph
 
 Maronna R.A., Yohai V. (1995). The behavior of the Stahel-Donoho robust multivariate estimator. \emph{Journal of the American Statistical Association}, \bold{90}, 330--341.
 
+Rousseeuw, P.J., Raymaekers, J., Hubert, M., (2018), A Measure of Directional Outlyingness with Applications to Image Data and Video. \emph{Journal of Computational and Graphical Statistics}, \bold{27}, 345--359.
 }
 
 

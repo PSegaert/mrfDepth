@@ -179,7 +179,7 @@ dirOutl <- function(x, z = NULL, options = list()){
     returned.result <- list(outlyingnessX = NULL, outlyingnessZ = NULL,
                             cutoff = NULL, flagX = NULL, flagZ = NULL,
                             singularSubsets = NULL, dimension = NULL,
-                            hyperplane = hyperplane, inSubspace =inSubspace)
+                            hyperplane = hyperplane, inSubspace = inSubspace)
     class(returned.result) <- c("mrfDepth", "dirOutl")
     return(returned.result) 
   }
@@ -187,7 +187,9 @@ dirOutl <- function(x, z = NULL, options = list()){
   outlyingnessX <- res$outlyingnessX
   outlyingnessZ <- res$outlyingnessZ
   
-  cutoff <- sqrt(qchisq(0.99, p1)) * median(outlyingnessX)
+  LDO <- log(0.1 + outlyingnessX)
+  cutoff <- exp(median(LDO) + mad(LDO) * qnorm(0.995)) - 0.1
+  
   flag.X <- outlyingnessX <= cutoff
   flag.Z <- outlyingnessZ <= cutoff
   

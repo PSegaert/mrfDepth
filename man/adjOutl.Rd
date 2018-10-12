@@ -49,7 +49,7 @@ Depending on the dimension \eqn{p}, different approximate algorithms are impleme
 
 The resulting AO values are invariant to affine transformations, rotations and shifts respectively provided that the \code{seed} is kept fixed at different runs of the algorithm. Note that the AO values are guaranteed to increase when more directions are considered provided the seed is kept fixed, as this ensures that the random directions are generated in a fixed order.
 
-An observation from \code{x} and \code{z} is flagged as an outlier if its AO exceeds a cutoff value. This cutoff value is equal to the squareroot of the 0.99 quantile of the chi-squared distribution with \eqn{p} degrees of freedom, multiplied by the median of the AO values from the \code{x} matrix.
+An observation from \code{x} and \code{z} is flagged as an outlier if its AO exceeds a cutoff value. This cutoff value is determined using the procedure in Rousseeuw et al. (2018). First, the logarithm of the AO values is taken to render their distribution more symmetric, after which a normal approximation yields a cutoff on these values. The cutoff is then transformed back by applying the exponential function.
 
 It is first checked whether the data lie in a subspace of dimension smaller than \eqn{p}. If so, a warning is given, as well as the dimension of the subspace and a direction which is orthogonal to it. Furthermore, the univariate adjusted outlyingness of the projected points \eqn{xv} is ill-defined when the scale in its denominator becomes zero. This can happen when many observations collapse. In these cases the algorithm will stop and give a warning. The returned values then include the direction \eqn{v} as well as an indicator specifying which of the observations of \code{x} belong to the hyperplane orthogonal to \eqn{v}.
 
@@ -91,6 +91,7 @@ This function extends the \code{adjOutlyingness} function in the package \code{r
 
  Hubert M., Vandervieren E. (2008). An adjusted boxplot for skewed distributions. \emph{Computational Statistics & Data Analysis}, \bold{52}, 5186--5201.
 
+Rousseeuw, P.J., Raymaekers, J., Hubert, M., (2018), A Measure of Directional Outlyingness with Applications to Image Data and Video. \emph{Journal of Computational and Graphical Statistics}, \bold{27}, 345--359.
 }
 \author{P. Segaert using \code{C++} code by K. Vakili, P. Segaert, G. Brys and M. Maechler.}
 \examples{

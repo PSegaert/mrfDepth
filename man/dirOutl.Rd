@@ -36,13 +36,13 @@ dirOutl(x, z = NULL, options = list())
 }
 
 \details{
-The directional outlyingness (DO) of multivariate data was introduced in Rousseeuw et al. (2016). It extends the Stahel-Donoho outlyingness towards skewed distributions.
+The directional outlyingness (DO) of multivariate data was introduced in Rousseeuw et al. (2018). It extends the Stahel-Donoho outlyingness towards skewed distributions.
 
 Depending on the dimension \eqn{p}, different approximate algorithms are implemented. The affine invariant algorithm can only be used when \eqn{n > p}. It draws \code{ndir} times at random \eqn{p} observations from \code{x} and considers the direction orthogonal to the hyperplane spanned by these \eqn{p} observations. At most \eqn{p} out of \eqn{n} directions can be considered. The orthogonal invariant version can be applied to high-dimensional data. It draws \code{ndir} times at random \eqn{2} observations from \code{x} and considers the direction through these two observations. Here, at most 2 out of \eqn{n} directions can be considered. Finally, the shift invariant version randomly draws \code{ndir} vectors from the unit sphere.
 
 The resulting DO values are invariant to affine transformations, rotations and shifts respectively provided that the \code{seed} is kept fixed at different runs of the algorithm. Note that the DO values are guaranteed to increase when more directions are considered provided the seed is kept fixed, as this ensures that the random directions are generated in a fixed order.
 
-An observation from \code{x} and \code{z} is flagged as an outlier if its DO exceeds a cutoff value. This cutoff value is equal to the squareroot of the 0.99 quantile of the chi-squared distribution with \eqn{p} degrees of freedom, multiplied by the median of the DO values from the \code{x} matrix.
+An observation from \code{x} and \code{z} is flagged as an outlier if its DO exceeds a cutoff value. This cutoff value is determined using the procedure in Rousseeuw et al. (2018). First, the logarithm of the DO values is taken to render their distribution more symmetric, after which a normal approximation yields a cutoff on these values. The cutoff is then transformed back by applying the exponential function.
 
 It is first checked whether the data lie in a subspace of dimension smaller than \eqn{p}. If so, a warning is given, as well as the dimension of the subspace and a direction which is orthogonal to it. Furthermore, the univariate adjusted outlyingness of the projected points \eqn{xv} is ill-defined when the scale in its denominator becomes zero. This can happen when many observations collapse. In these cases the algorithm will stop and give a warning. The returned values then include the direction \eqn{v} as well as an indicator specifying which of the observations of \code{x} belong to the hyperplane orthogonal to \eqn{v}.
 
@@ -69,10 +69,9 @@ It is first checked whether the data lie in a subspace of dimension smaller than
 \seealso{
   \code{\link{dprojdepth}}, \code{\link{dprojmedian}}, \code{\link{adjOutl}}, \code{\link{outlyingness}}
 
-
 }
 \references{
-Rousseeuw, P.J., Raymaekers, J., Hubert, M., (2016), A Measure of Directional Outlyingness with Applications to Image Data and Video. \emph{arXiv: 1608.05012}.\\
+Rousseeuw, P.J., Raymaekers, J., Hubert, M., (2018), A Measure of Directional Outlyingness with Applications to Image Data and Video. \emph{Journal of Computational and Graphical Statistics}, \bold{27}, 345--359.
 }
 \author{J. Raymaekers and P. Roussseeuw}
 \examples{

@@ -2,10 +2,18 @@
 \title{News for package "mrfDepth"}
 \encoding{UTF-8}
 
+\section{Changes in version 1.0.10 (2018-10-12)}{
+\itemize{
+    \item Bugfixes in distSpace method
+    \item Update of references in documentation
+ }
+}
 
-\section{Changes in version 1.0.9 (2018-08-01)}{
+\section{Changes in version 1.0.9 (2018-09-26)}{
 \itemize{
     \item Change of maintainer.
+    \item Change of cutoff in outlyingness, adjOutl and dirOutl
+    \item Change of compiler flags (removed C flags)
  }
 }
 
